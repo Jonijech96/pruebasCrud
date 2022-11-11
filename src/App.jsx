@@ -8,6 +8,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { ToDoListApp } from "./components/ToDoListApp";
 import { CrudApp } from "./components/crud/CrudApp";
 import { SnippetsApi } from "./components/SnippetsApi";
+import { CarsCrud } from "./components/crud-cars/CarsCrud";
 
 function App() {
   return (
@@ -16,8 +17,10 @@ function App() {
       {/* <Pokemons /> */}
       {/* <Bootstrap /> */}
       {/* <ToDoListApp /> */}
-      <CrudApp />
+      {/* <CrudApp /> */}
       {/* <SnippetsApi /> */}
+      
+      <CarsCrud />
     </div>
   );
 }
