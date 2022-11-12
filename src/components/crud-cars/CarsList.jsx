@@ -10,6 +10,7 @@ import {
   Box,
   Heading,
 } from "@chakra-ui/react";
+import { AlertDelete } from "./AlertDelete";
 
 export const CarsList = ({ carsList, selectCard, deleteCard }) => {
   return (
@@ -27,6 +28,10 @@ export const CarsList = ({ carsList, selectCard, deleteCard }) => {
           boxShadow="dark-lg"
           display="grid"
           gridGap={2}
+          _hover={{
+            background: "white",
+            color: "teal.500",
+          }}
         >
           <Heading mb={2} size="lg">
             {car.brand}
@@ -42,9 +47,10 @@ export const CarsList = ({ carsList, selectCard, deleteCard }) => {
             <Button colorScheme="blue" onClick={() => selectCard(car)}>
               select
             </Button>
-            <Button colorScheme="teal" onClick={() => deleteCard(car.id)}>
+            <AlertDelete deleteCard={deleteCard} idcar={car.id}/>
+            {/* <Button colorScheme="teal" onClick={() => deleteCard(car.id)}>
               delete
-            </Button>
+            </Button> */}
           </Box>
         </ListItem>
       ))}

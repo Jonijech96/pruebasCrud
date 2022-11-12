@@ -72,6 +72,13 @@ export const CardsForm = ({
   };
   const cancel = () => {
     onClose();
+    toast({
+      title: carSelected ?"card edit cancel.": "card create cancel",
+      description: "We've created your account for you.",
+      status: "info",
+      duration: 9000,
+      isClosable: true,
+    });
     setCarSelected(null);
   };
 
@@ -98,7 +105,7 @@ export const CardsForm = ({
                 <Input type="text" placeholder="model" {...register("model")} />
                 <FormHelperText>ingrese Modelo del vehiculo</FormHelperText>
               </FormControl>
-              <FormControl mb={4} id="color">
+              <FormControl isInvalid={false} mb={4} id="color">
                 <FormLabel>Color</FormLabel>
                 <Input type="text" placeholder="Color" {...register("color")} />
                 <FormHelperText>ingrese color del vehiculo</FormHelperText>

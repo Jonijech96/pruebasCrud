@@ -39,7 +39,7 @@ export const CarsCrud = () => {
   };
 
   return (
-    <Box bg="gray.700" color="gray.200">
+    <Box bg="gray.700" color="gray.200" minH="100vh">
       <Box maxW="1200px" w="80%" mx="auto">
         <Flex alignItems="center">
           <Heading mb={4}>Cars</Heading>
