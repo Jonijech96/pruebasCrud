@@ -27,6 +27,16 @@ export const AlertDelete = ({idcar,deleteCard}) => {
       isClosable: true,
     });
   }
+  const buttonCancel = ()=>{
+    onClose();
+    toast({
+      title: "Account created.",
+      description: "We've created your account for you.",
+      status: "info",
+      duration: 9000,
+      isClosable: true,
+    });
+  }
   return (
     <>
       <Button colorScheme='red' onClick={onOpen}>
@@ -49,7 +59,7 @@ export const AlertDelete = ({idcar,deleteCard}) => {
             </AlertDialogBody>
 
             <AlertDialogFooter>
-              <Button ref={cancelRef} onClick={onClose}>
+              <Button ref={cancelRef} onClick={buttonCancel}>
                 Cancel
               </Button>
               <Button colorScheme='red' onClick={buttonDelete} ml={3}>

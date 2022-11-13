@@ -80,6 +80,7 @@ export const CardsForm = ({
       isClosable: true,
     });
     setCarSelected(null);
+    reset(initialValue);
   };
 
   return (

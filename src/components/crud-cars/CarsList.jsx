@@ -32,6 +32,7 @@ export const CarsList = ({ carsList, selectCard, deleteCard }) => {
             background: "white",
             color: "teal.500",
           }}
+          transitionDuration="200ms"
         >
           <Heading mb={2} size="lg">
             {car.brand}
